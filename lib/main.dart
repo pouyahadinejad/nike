@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nike/data/repository/product_repository.dart';
 import 'package:nike/theme.dart';
 
 void main() {
@@ -10,6 +11,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    productRepository
+        .getAll(0)
+        .then((value) {
+          debugPrint(value.toString());
+        })
+        .catchError((e) {
+          debugPrint(e.toString());
+        });
     final defaultTextStyle = TextStyle(
       fontFamily: 'IranYekan',
       color: LightThemeColors.primaryTextColor,
