@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
     productRepository
         .getAll(0)
         .then((value) {
-          debugPrint(value.toString());
+          print(value.toString());
         })
         .catchError((e) {
-          debugPrint(e.toString());
+          print(e.toString());
         });
     final defaultTextStyle = TextStyle(
       fontFamily: 'IranYekan',
