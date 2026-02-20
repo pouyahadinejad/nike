@@ -11,13 +11,13 @@ class ProductEntity {
   final String imageUrl;
   final int price;
   final int discount;
-  final int previousprice;
+  final int previousPrice;
 
   ProductEntity.fromJson(Map<String, dynamic> json)
-    : id = json['id'],
-      title = json['title'],
-      imageUrl = json['image'],
-      price = json['price'],
-      discount = json['discount'],
-      previousprice = json['previous_price'] ?? json['price'];
+      : id = json['id'],
+        title = json['title'],
+        imageUrl = json['image'],
+        price = json['price'],
+        previousPrice = json['previous_price'] ?? json['price'],
+        discount = json['discount'];
 }

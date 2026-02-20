@@ -1,8 +1,6 @@
-import 'package:dio/dio.dart';
+import 'package:nike/common/http_client.dart';
 import 'package:nike/data/product.dart';
 import 'package:nike/data/source/product_data_source.dart';
-
-final httpClient = Dio(BaseOptions(baseUrl: 'https://fapi.7learn.com/api/v1/'));
 
 final productRepository = ProductRepository(
   ProductRemoteDataSource(httpClient),
