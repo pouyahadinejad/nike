@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:nike/data/common/http_response_validator.dart';
 import 'package:nike/data/product.dart';
 
+
 abstract class IProductDataSource {
   Future<List<ProductEntity>> getAll(int sort);
   Future<List<ProductEntity>> search(String searchTerm);

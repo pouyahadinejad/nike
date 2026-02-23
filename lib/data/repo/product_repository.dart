@@ -1,10 +1,11 @@
+
+
 import 'package:nike/common/http_client.dart';
 import 'package:nike/data/product.dart';
 import 'package:nike/data/source/product_data_source.dart';
 
-final productRepository = ProductRepository(
-  ProductRemoteDataSource(httpClient),
-);
+final productRepository =
+    ProductRepository(ProductRemoteDataSource(httpClient));
 
 abstract class IProductRepository {
   Future<List<ProductEntity>> getAll(int sort);
